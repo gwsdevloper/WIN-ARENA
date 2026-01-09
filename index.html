@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>WIN ARENA - Free Fire Tournament App</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Roboto',sans-serif;
+}
+
+body{
+    background:#0a0a0a;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+a{ text-decoration:none; color:inherit; }
+
+/* HEADER */
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 15px;
+    background:#1a1a1a;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+header img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    border:2px solid #ff0000;
+}
+
+.app-title{
+    flex:1;
+    text-align:center;
+    color:#ff0000;
+    font-size:1.2rem;
+    font-weight:700;
+}
+
+.download-btn{
+    padding:6px 14px;
+    background:#ff0000;
+    border-radius:8px;
+    font-size:.85rem;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:50px 15px;
+    background:linear-gradient(135deg,#ff0000,#000);
+}
+
+.hero h1{
+    font-size:1.8rem;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:.95rem;
+    margin-bottom:25px;
+}
+
+.download-btn.highlighted{
+    display:inline-block;
+    padding:12px 28px;
+    font-size:1rem;
+    border-radius:10px;
+}
+
+/* SECTIONS */
+section{
+    padding:35px 15px;
+    text-align:center;
+}
+
+section h2{
+    font-size:1.5rem;
+    margin-bottom:15px;
+    color:#ff0000;
+}
+
+section p{
+    font-size:.95rem;
+    line-height:1.6;
+}
+
+/* SLIDER */
+.slider{
+    width:100%;
+    overflow:hidden;
+    border-radius:12px;
+    border:2px solid #ff0000;
+    position:relative;
+}
+
+.slides{
+    display:flex;
+    transition:transform .4s ease;
+}
+
+.slide{
+    min-width:100%;
+}
+
+.slide img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.prev,.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,.6);
+    border:none;
+    color:#fff;
+    font-size:1.8rem;
+    padding:4px 10px;
+    border-radius:6px;
+}
+
+.prev{ left:8px; }
+.next{ right:8px; }
+
+/* FEATURES */
+.features{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    align-items:center;
+}
+
+.feature-card{
+    width:100%;
+    max-width:320px;
+    background:#1a1a1a;
+    padding:18px;
+    border-radius:12px;
+}
+
+.feature-card h3{
+    color:#ff0000;
+    margin-bottom:8px;
+}
+
+/* FOOTER */
+footer{
+    background:#1a1a1a;
+    padding:18px 10px;
+    text-align:center;
+    font-size:.85rem;
+}
+
+@media(min-width:768px){
+    .hero h1{ font-size:2.2rem; }
+    section h2{ font-size:2rem; }
+    .features{ flex-direction:row; justify-content:center; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER DOWNLOAD -->
+<header>
+    <img src="images/gameadda-logo.png" alt="WIN ARENA Logo">
+    <div class="app-title">WIN ARENA</div>
+    <a href="https://ga-fs.primexop.com/12413/androidBuilds/win-arenaV2.apk"
+       class="download-btn"
+       target="_blank">Download</a>
+</header>
+
+<!-- HERO DOWNLOAD -->
+<section class="hero">
+    <h1>WIN ARENA</h1>
+    <p>Join the ultimate Free Fire tournaments and compete with players worldwide!</p>
+    <a href="https://ga-fs.primexop.com/12413/androidBuilds/win-arenaV2.apk"
+       class="download-btn highlighted"
+       target="_blank">Download Now</a>
+</section>
+
+<!-- ABOUT + SLIDER -->
+<section>
+    <h2>About the App</h2>
+    <p>WIN ARENA is your one-stop app for Free Fire tournaments.</p>
+
+    <div class="slider">
+        <div class="slides" id="slides">
+            <div class="slide"><img src="images/screenshot1.png"></div>
+            <div class="slide"><img src="images/screenshot2.png"></div>
+            <div class="slide"><img src="images/screenshot3.png"></div>
+        </div>
+        <button class="prev" onclick="move(-1)">❮</button>
+        <button class="next" onclick="move(1)">❯</button>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section>
+    <h2>Features</h2>
+    <div class="features">
+        <div class="feature-card">
+            <h3>Real-Time Matches</h3>
+            <p>Live tournaments</p>
+        </div>
+        <div class="feature-card">
+            <h3>Secure Wallet</h3>
+            <p>Safe withdrawals</p>
+        </div>
+        <div class="feature-card">
+            <h3>Daily Challenges</h3>
+            <p>Earn rewards</p>
+        </div>
+    </div>
+</section>
+
+<!-- DOWNLOAD SECTION -->
+<section id="download">
+    <h2>Download WIN ARENA</h2>
+    <a href="https://ga-fs.primexop.com/12413/androidBuilds/win-arenaV2.apk"
+       class="download-btn highlighted"
+       target="_blank">Download APK</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 WIN ARENA. All Rights Reserved
+</footer>
+
+<script>
+let index=0;
+function move(step){
+    const slides=document.getElementById("slides");
+    const total=slides.children.length;
+    index=(index+step+total)%total;
+    slides.style.transform=`translateX(-${index*100}%)`;
+}
+</script>
+
+</body>
+</html>
